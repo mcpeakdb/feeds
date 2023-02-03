@@ -29,7 +29,7 @@ type RssDescription struct {
 }
 
 type RssCreator struct {
-	XMLName xml.Name `xml:"creator"`
+	XMLName xml.Name `xml:"dc:creator"`
 	Creator string   `xml:",cdata"`
 }
 
