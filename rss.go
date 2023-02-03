@@ -27,6 +27,12 @@ type RssDescription struct {
 	XMLName     xml.Name `xml:"description"`
 	Description string   `xml:",cdata"`
 }
+
+type RssCreator struct {
+	XMLName xml.Name `xml:"creator"`
+	Creator string   `xml:",cdata"`
+}
+
 type RssImage struct {
 	XMLName xml.Name `xml:"image"`
 	Url     string   `xml:"url"`
@@ -83,6 +89,7 @@ type RssItem struct {
 	Guid        string `xml:"guid,omitempty"`    // Id used
 	PubDate     string `xml:"pubDate,omitempty"` // created or updated
 	Source      string `xml:"source,omitempty"`
+	Creator     *RssCreator
 }
 
 type RssEnclosure struct {
